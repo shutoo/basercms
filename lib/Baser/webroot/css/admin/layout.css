@@ -101,7 +101,7 @@ body > #Page {
 	left:-180px;
 }
 
-#BtnSideBarOpener {
+.bc-btn-side-bar-opener {
 	width:30px;
 	height:30px;
 	position:absolute;
@@ -119,7 +119,7 @@ body > #Page {
 
 /* FavoriteMenu
 ----------------------------------------------- */
-#FavoriteArea {
+.bc-favorite-area {
 	margin-bottom: 14px;
     float: left;
     width: 100%;
@@ -128,17 +128,17 @@ body > #Page {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-#FavoriteMenu {
+.bc-favorite-menu {
     width: 100%;
 }
 
-#FavoriteMenu h2{
+.bc-favorite-menu h2{
 	color: #FFF;
     background: #333333;
 	padding: 6px 10px 0;
 }
 
-#FavoriteMenu h2 img {
+.bc-favorite-menu h2 img {
     margin: 0 0 -9px;
 }
 
@@ -152,7 +152,7 @@ ul.favorite-menu-list a{
 	padding-left: 22px;
 	background: url(../../img/admin/blt_favorite.png) no-repeat 5px 5px;
 }
-#FavoriteMenu a:hover{
+.bc-favorite-menu a:hover{
 	color: #AAA;
 	text-decoration: none;
 }
@@ -176,11 +176,11 @@ ul.favorite-menu-list li.ui-sortable-helper {
 	border:2px solid #CCC;
 }
 .favolite-menu-tools li{
-	padding: 50px 0 0 15px;
+	padding: 50px 0 5px 15px;
 	float: left;
 	margin-right:5px;
 }
-#FavoriteMenu .no-data {
+.bc-favorite-menu .no-data {
 	padding:10px 10px;
 	border:3px dotted #CCC;
 	background: none;

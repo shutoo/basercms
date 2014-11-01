@@ -15,10 +15,10 @@ $this->BcBaser->js('admin/baser_favorite');
 ?>
 
 
-<div id="FavoriteDeleteUrl" style="display: none"><?php $this->BcBaser->url(array('plugin' => null, 'controller' => 'favorites', 'action' => 'ajax_delete')) ?></div>
-<div id="FavoriteAjaxSorttableUrl" style="display:none"><?php $this->BcBaser->url(array('plugin' => null, 'controller' => 'favorites', 'action' => 'update_sort')) ?></div>
+<div class="bc-favorite-delete-url" style="display: none"><?php $this->BcBaser->url(array('plugin' => null, 'controller' => 'favorites', 'action' => 'ajax_delete')) ?></div>
+<div class="bc-favorite-ajax-sorttable-url" style="display:none"><?php $this->BcBaser->url(array('plugin' => null, 'controller' => 'favorites', 'action' => 'update_sort')) ?></div>
 
-<div id="FavoriteMenu" class="cbb">
+<div class="bc-favorite-menu cbb">
 
 	<h2><?php $this->BcBaser->img('admin/head_favorite.png', array('alt' => 'よく使う項目')) ?></h2>
 
@@ -44,7 +44,7 @@ $this->BcBaser->js('admin/baser_favorite');
 
 </div>
 
-<div id="FavoriteDialog" title="よく使う項目" style="display:none">
+<div class="bc-favorite-dialog" title="よく使う項目" style="display:none">
 	<?php echo $this->BcForm->create('Favorite', array('action' => 'ajax', 'url' => array('plugin' => null))) ?>
 	<?php echo $this->BcForm->input('Favorite.id', array('type' => 'hidden')) ?>
 	<dl>
@@ -55,7 +55,7 @@ $this->BcBaser->js('admin/baser_favorite');
 </div>
 
 
-<ul id="FavoritesMenu" class="context-menu" style="display:none">
+<ul id="BcFavoritesMenu" class="context-menu" style="display:none">
     <li class="edit"><?php $this->BcBaser->link('編集', '#FavoriteEdit') ?></li>
     <li class="delete"><?php $this->BcBaser->link('削除', '#FavoriteDelete') ?></li>
 </ul>

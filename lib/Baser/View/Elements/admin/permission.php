@@ -21,8 +21,8 @@ $(function(){
 		var y = $(this).position().top;
 		var x = $(this).position().left-500;
 		
-		$("#PermissionDialog").dialog('option', 'position', [x, y]);
-		$('#PermissionDialog').dialog('open');
+		$('.bc-permission-dialog').dialog('option', 'position', [x, y]);
+		$('.bc-permission-dialog').dialog('open');
 		return false;
 	});
 /**
@@ -33,7 +33,7 @@ $(function(){
 /**
  * ダイアログを初期化
  */
-	$("#PermissionDialog").dialog({
+	$(".bc-permission-dialog").dialog({
 		bgiframe: true,
 		autoOpen: false,
 		position: [250, 150],
@@ -41,7 +41,7 @@ $(function(){
 		modal: true,
 		open: function(event, ui){
 			$("#PermissionName").val($("#CurrentPageName").html());
-			$("#PermissionUrl").val($("#CurrentPageUrl").html().replace($("#PermissionAdmin").html(), ''));
+			$("#PermissionUrl").val($("#CurrentPageUrl").html().replace($(".bc-permission-admin").html(), ''));
 			$("#PermissionAjaxAddForm").submit();
 			$("#PermissionName").focus();
 		},
@@ -63,7 +63,7 @@ $(function(){
 						},
 						success: function(response, status) {
 							if(response) {
-								$("#PermissionDialog").dialog('close');
+								$(".bc-permission-dialog").dialog('close');
 							} else {
 								alert('保存に失敗しました。');
 							}
@@ -84,7 +84,7 @@ $(function(){
 </script>
 
 
-<div id="PermissionDialog" title="アクセス制限登録" style="display:none">
+<div class="bc-permission-dialog" title="アクセス制限登録" style="display:none">
 	<?php echo $this->BcForm->create('Permission', array('action' => 'ajax_add', 'url' => array('plugin' => null))) ?>
 	<?php echo $this->BcForm->input('Permission.id') ?>
 	<dl>
@@ -95,7 +95,7 @@ $(function(){
 		<dt><h4><?php echo $this->BcForm->label('Permission.name', 'ルール名') ?></h4></dt>
 		<dd><?php echo $this->BcForm->input('Permission.name', array('type' => 'text', 'size' => 30, 'class' => 'required')) ?></dd>
 		<dt><?php echo $this->BcForm->label('Permission.url', 'URL設定') ?></dt>
-		<dd><strong id="PermissionAdmin">/<?php echo Configure::read('Routing.prefixes.0') ?>/</strong><?php echo $this->BcForm->input('Permission.url', array('type' => 'text', 'size' => 30, 'class' => 'required')) ?></dd>
+		<dd><strong class="bc-permission-admin">/<?php echo Configure::read('Routing.prefixes.0') ?>/</strong><?php echo $this->BcForm->input('Permission.url', array('type' => 'text', 'size' => 30, 'class' => 'required')) ?></dd>
 		<dt><?php echo $this->BcForm->label('Permission.auth', 'アクセス') ?></dt>
 		<dd>
 			<?php

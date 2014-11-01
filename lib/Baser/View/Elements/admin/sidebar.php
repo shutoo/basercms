@@ -16,8 +16,8 @@
 ?>
 
 <div class="bc-side-bar">
-	<div id="BtnSideBarOpener">＜</div>
-	<div id="FavoriteArea">
+	<div class="bc-btn-side-bar-opener">＜</div>
+	<div class="bc-favorite-area">
 		<?php $this->BcBaser->element('favorite_menu') ?>
 		<?php $this->BcBaser->element('permission') ?>
 	</div>
