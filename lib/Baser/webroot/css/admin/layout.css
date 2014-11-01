@@ -298,13 +298,13 @@ ul.favorite-menu-list li.ui-sortable-helper {
 
 /* Footer
 ----------------------------------------------- */
-#Footer{
+.bc-footer{
 	width:100%;
 	min-width:960px;
     position:absolute;
     bottom:0px;
 }
-#FooterInner{
+.bc-footer-inner {
 	background-image: url(../../img/admin/bg_footer.png);
 	background-repeat: repeat-x;
 	background-color: #333;
@@ -313,18 +313,18 @@ ul.favorite-menu-list li.ui-sortable-helper {
 	margin: 0;
 	min-width:960px;
 }
-#FooterInner a{
+.bc-footer-inner a{
 	color: #BBB;
 	text-decoration: none;
 }
-#FooterInner a:hover{
+.bc-footer-inner a:hover{
 	color: #EEE;
 }
 
 /* FooterLogo
 ----------------------------------------------- */
 
-#FooterLogo{
+.bc-footer-logo{
 	width: 190px;
 	float: left;
 	padding: 65px 0;
@@ -333,25 +333,24 @@ ul.favorite-menu-list li.ui-sortable-helper {
 /* FooterMenu / FooterLink
 ----------------------------------------------- */
 
-#FooterMenu{
+.bc-footer-menu{
 	float: left;
 	background-image: url(../../img/admin/bg_border_2.png);
 	background-repeat: repeat-y;
 	padding:0 30px 0 15px;
 }
-#FooterMenu h2,
-#FooterLink h2{
+.bc-footer-menu h2,
+.bc-footer-link h2 {
 	margin-bottom:15px;
 }
-#FooterMenu li,
-#FooterLink li{
-/*	padding-right:30px;*/
+.bc-footer-menu li,
+.bc-footer-link li{
 	margin:5px 0;
 	background: url(../../img/admin/blt_list_2.png) no-repeat left center;
 	padding-left:15px;
 	line-height:18px;
 }
-#FooterLink{
+.bc-footer-link{
 	float: left;
 	background-image: url(../../img/admin/bg_border_2.png);
 	background-repeat: repeat-y;
@@ -361,25 +360,25 @@ ul.favorite-menu-list li.ui-sortable-helper {
 /* FooterBanner
 ----------------------------------------------- */
 
-#FooterBanner {
+.bc-footer-banner {
 	padding-top:5px;
 	margin-bottom:15px;
 }
-#FooterBanner li {
+.bc-footer-banner li {
 	text-align:right;
 	padding:0px 20px;
 }
-#FooterBanner li img{
+.bc-footer-banner li img{
 	vertical-align:bottom;
 }
-#FooterBanner li.lastChild{
+.bc-footer-banner li.lastChild{
    margin-top:7px;
 }
 
 /* BaserVersion
 ----------------------------------------------- */
 
-#BaserVersion {
+.bc-version {
 	padding-right:20px;
 	text-align:right;
 	font-size:12px;
@@ -390,7 +389,7 @@ ul.favorite-menu-list li.ui-sortable-helper {
 /* Copyright
 ----------------------------------------------- */
 
-#Copyright {
+.bc-copyright {
 	text-align:right;
 	font-size:10px;
 	padding-right:20px;
