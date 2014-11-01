@@ -82,7 +82,7 @@
 
 					<div class="cbb">
 
-								<?php $this->BcBaser->element('crumbs') ?>
+						<?php $this->BcBaser->element('crumbs') ?>
 
 						<div id="ContentsBody" class="contents-body clearfix">
 

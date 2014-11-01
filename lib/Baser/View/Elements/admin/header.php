@@ -17,13 +17,13 @@ if (!empty($this->request->params['prefix'])) {
 	$loginUrl = '/users/login';
 }
 ?>
-<div id="Header" class="clearfix">
+<div class="clearfix bc-header">
 	<?php $this->BcBaser->element('toolbar') ?>
 	<?php if ($this->name == 'Installations' || $this->request->url == $loginUrl || $this->BcAdmin->isAdminGlobalmenuUsed()): ?>
-		<div class="clearfix" id="HeaderInner">
+		<div class="bc-header-inner clearfix">
 
 			<?php if (!empty($user)): ?>
-				<div id="GlobalMenu">
+				<div class="bc-global-menu">
 					<ul class="clearfix">
 						<li><?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_header_menu_1.png', array('width' => 118, 'height' => 26, 'alt' => '固定ページ管理', 'class' => 'btn', 'title' => '固定ページ管理')), array('plugin' => '', 'controller' => 'pages', 'action' => 'index')) ?></li>
 						<li><?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_header_menu_2.png', array('width' => 123, 'height' => 26, 'alt' => 'ウィジェット管理', 'class' => 'btn', 'title' => 'ウィジェット管理')), array('plugin' => '', 'controller' => 'widget_areas', 'action' => 'index')) ?></li>
@@ -34,11 +34,11 @@ if (!empty($this->request->params['prefix'])) {
 				</div>
 			<?php endif ?>
 
-			<div id="Logo">
+			<div class="bc-logo">
 				<?php if (!empty($user)): ?>
-					<?php $this->BcBaser->link($this->BcBaser->getImg('admin/logo_header.png', array('width' => 153, 'height' => 30, 'alt' => 'baserCMS')), array('plugin' => null, 'controller' => 'dashboard', 'action' => 'index')) ?>
+					<?php $this->BcBaser->link($this->BcBaser->getImg('admin/logo_header.png', array('alt' => 'baserCMS')), array('plugin' => null, 'controller' => 'dashboard', 'action' => 'index')) ?>
 				<?php else: ?>
-					<?php $this->BcBaser->img('admin/logo_header.png', array('width' => 153, 'height' => 30, 'alt' => 'baserCMS')) ?>
+					<?php $this->BcBaser->img('admin/logo_header.png', array('alt' => 'baserCMS')) ?>
 				<?php endif ?>
 			</div>
 

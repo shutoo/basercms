@@ -15,15 +15,15 @@
  */
 ?>
 
-<div id="SideBar">
-	<div id="BtnSideBarOpener">＜</div>
-	<div id="FavoriteArea">
+<div class="bc-side-bar">
+	<div class="bc-btn-side-bar-opener">＜</div>
+	<div class="bc-favorite-area">
 		<?php $this->BcBaser->element('favorite_menu') ?>
 		<?php $this->BcBaser->element('permission') ?>
-	<!-- / .cbb .clearfix --></div>
+	</div>
 
 <?php if(!empty($this->BcBaser->siteConfig['admin_side_banner'])): ?>
-	<div id="BannerArea">
+	<div class="bc-banner-area">
 		<ul>
 			<li><a href="http://barket.jp/" target="_blank"><img src="http://basercms.net/img/banner_baser_market.png" width="205" alt="baserマーケット" title="baserマーケット" /></a></li>
 			<li><a href="http://magazine.barket.jp/" target="_blank"><img src="http://basercms.net/img/banner_basers_magazine.png" width="205" alt="basersマガジン" title="baserマーケット" /></a></li>
