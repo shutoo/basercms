@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;;;;;;;;;;AAcQ,wBAAa;AACb,qBAAU;AACV,uBAAY;AACZ,yBAAc",
+"sources": ["../../admin_origin/css/import.scss"],
+"names": [],
+"file": "import.css"
+}

@@ -10,9 +10,9 @@
  * @since			baserCMS v 2.0.0
  * @license			http://basercms.net/license/index.html
  */
-@import url(default.css);
-@import url(base.css);
-@import url(layout.css);
-@import url(contents.css);
 
-/*# sourceMappingURL=import.css.map */
+
+@import "default.css";
+@import "base.css";
+@import "layout.css";
+@import "contents.css";
