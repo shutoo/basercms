@@ -94,7 +94,7 @@ body > #Page {
 /* ==================================================================== */
 
 
-#SideBar{
+.bc-side-bar{
 	width: 208px;
 	float: left;
 	position: absolute;
@@ -189,7 +189,7 @@ ul.favorite-menu-list li.ui-sortable-helper {
 
 /* BannerArea
 ----------------------------------------------- */
-#BannerArea li {
+.bc-banner-area li {
 	margin-bottom: 2px;
 	padding-left:1px;
 	padding-right:1px;
