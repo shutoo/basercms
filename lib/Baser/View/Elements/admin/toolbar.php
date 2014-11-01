@@ -29,32 +29,32 @@ $userController = Inflector::tableize($this->Session->read(AuthComponent::$sessi
 ?>
 <script type="text/javascript">
 $(function(){
-	$('#UserMenu').fixedMenu();
-	$('#SystemMenu h2').click(function(){
-		if($(this).next().css('display')=='none') {
-			$(this).next().slideDown(200);
-		} else {
-			$(this).next().slideUp(200);
+	var $bcUserMenu = $('.bc-user-menu');
+	var $bcSystemMenu = $("#SystemMenu");
+	$bcUserMenu.fixedMenu();
+	$bcSystemMenu.find('h2').click(function(){
+		$(this).next().slideToggle(200);
+	});
+	$bcSystemMenu.find('ul:first').show();
+	$bcUserMenu.find("ul li div ul li").each(function(){
+		var $this = $(this);
+		if(!$this.html().replace(/(^\s+)|(\s+$)/g, "")) {
+			$this.remove();
 		}
 	});
-	$('#SystemMenu ul:first').show();
-	$("#UserMenu ul li div ul li").each(function(){
-		if(!$(this).html().replace(/(^\s+)|(\s+$)/g, "")) {
-			$(this).remove();
-		}
-	});
-	$("#UserMenu ul li div ul").each(function(){
-		if(!$(this).html().replace(/(^\s+)|(\s+$)/g, "")) {
-			$(this).prev().remove();
-			$(this).remove();
+	$bcUserMenu.find("ul li div ul").each(function(){
+		var $this = $(this);
+		if(!$this.html().replace(/(^\s+)|(\s+$)/g, "")) {
+			$this.prev().remove();
+			$this.remove();
 		}
 	});
 });
 </script>
 
-<div id="ToolBar">
-	<div id="ToolbarInner" class="clearfix">
-		<div id="ToolMenu">
+<div class="bc-tool-bar">
+	<div class="bc-tool-bar-inner" class="clearfix">
+		<div class="bc-tool-menu">
 			<ul>
 				<?php if ($this->name == 'Installations'): ?>
 					<li><?php $this->BcBaser->link('インストールマニュアル', 'http://basercms.net/manuals/introductions/4.html', array('target' => '_blank')) ?></li>
@@ -77,14 +77,14 @@ $(function(){
 				<?php endif ?>
 				<?php if (!$loginUrl || $this->request->url != $loginUrl): ?>
 					<?php if (Configure::read('debug') == -1 && $this->name != "Installations"): ?>
-						<li>&nbsp;&nbsp;<span id="DebugMode" title="インストールモードです。運営を開始する前にシステム設定よりノーマルモードに戻しましょう。">インストールモード</span>&nbsp;&nbsp;</li>
+						<li>&nbsp;&nbsp;<span class="bc-debug-mode" title="インストールモードです。運営を開始する前にシステム設定よりノーマルモードに戻しましょう。">インストールモード</span>&nbsp;&nbsp;</li>
 					<?php elseif (Configure::read('debug') > 0): ?>
-						<li>&nbsp;&nbsp;<span id="DebugMode" title="デバッグモードです。運営を開始する前にシステム設定よりノーマルモードに戻しましょう。">デバッグモード<?php echo mb_convert_kana(Configure::read('debug'), 'N') ?></span>&nbsp;&nbsp;</li>
+						<li>&nbsp;&nbsp;<span class="bc-debug-mode" title="デバッグモードです。運営を開始する前にシステム設定よりノーマルモードに戻しましょう。">デバッグモード<?php echo mb_convert_kana(Configure::read('debug'), 'N') ?></span>&nbsp;&nbsp;</li>
 					<?php endif; ?>
 				<?php endif ?>
 			</ul>
 		</div>
-		<div id="UserMenu">
+		<div class="bc-user-menu">
 			<ul class="clearfix">
 				<li>
 					<?php if (!empty($user)): ?>
@@ -120,7 +120,7 @@ $(function(){
 				<?php if (!empty($user) && $authPrefix == 'admin'): ?>
 					<li>
 						<?php $this->BcBaser->link('システムナビ' . ' ' . $this->BcBaser->getImg('admin/btn_dropdown.png', array('width' => 8, 'height' => 11, 'class' => 'btn')), 'javascript:void(0)', array('class' => 'title')) ?>
-						<div id="SystemMenu"><div>
+						<div id="SystemMenu" class="bc-system-menu"><div>
 								<?php $adminSitemap = Configure::read('BcApp.adminNavi') ?>
 								<?php foreach ($adminSitemap as $key => $package): ?>
 									<?php if (empty($package['name'])): ?>
@@ -135,7 +135,8 @@ $(function(){
 										</ul>
 									<?php endif ?>
 								<?php endforeach ?>
-							</div></div>
+							</div>
+						</div>
 					</li>
 				<?php endif ?>
 			</ul>
