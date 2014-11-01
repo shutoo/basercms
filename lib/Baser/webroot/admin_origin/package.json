@@ -1,0 +1,14 @@
+{
+  "name": "baserCMSAdminResources",
+  "version": "3.1.0",
+  "description": "管理画面用CSS/JSのオリジナルファイル",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "baser Foundation",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}
