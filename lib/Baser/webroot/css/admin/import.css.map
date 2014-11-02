@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": ";;;;;;;;;;;;AAcQ,wBAAa;AACb,qBAAU;AACV,uBAAY;AACZ,yBAAc",
+"mappings": "AAcQ,wBAAa,CACb,qBAAU,CACV,uBAAY,CACZ,yBAAc",
 "sources": ["../../admin_origin/css/import.scss"],
 "names": [],
 "file": "import.css"
