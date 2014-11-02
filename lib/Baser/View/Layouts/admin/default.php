@@ -104,7 +104,7 @@
 							<!-- / #ContentsBody .contents-body .clarfix --></div>
 
 							<?php if (!empty($user)): ?>
-							<div id="ToTop"><?php $this->BcBaser->link('▲ トップへ', '#Header') ?></div>
+							<div id="ToTop"><?php $this->BcBaser->link('▲ トップへ', '#Top') ?></div>
 							<?php endif ?>
 
 						<!-- / .cbb --></div>
