@@ -30,7 +30,8 @@
 		<!--[if IE]><?php $this->BcBaser->js(array('admin/excanvas')) ?><![endif]-->
 		<?php
 		$this->BcBaser->js(array(
-			'admin/jquery-1.7.2.min',
+			'admin/jquery-1.11.1.min',
+			'admin/jquery-migrate-1.2.1.min',
 			'admin/default'
 		))
 		?>

@@ -13,7 +13,8 @@
 		<?php $this->BcBaser->metaKeywords() ?>
 		<?php $this->BcBaser->css(array('admin/html5reset-1.6.1', 'smartphone/style')) ?>
 		<?php $this->BcBaser->js(array(
-			'admin/jquery-1.7.2.min',
+			'admin/jquery-2.1.1.min',
+			'admin/jquery-migrate-1.2.1.min',
 			'smartphone/startup.js'
 		)); ?>
 		<?php $this->BcBaser->scripts() ?>
