@@ -21,7 +21,7 @@
 		<?php $this->BcBaser->title() ?>
 		<?php
 		$this->BcBaser->css(array(
-			'admin/jquery-ui/ui.all',
+			'admin/jquery-ui.min',
 			'admin/import',
 			'../js/admin/jquery.contextMenu-1.0/jquery.contextMenu',
 			'admin/colorbox/colorbox',
@@ -32,6 +32,7 @@
 		$this->BcBaser->js(array(
 			'admin/jquery-1.11.1.min',
 			'admin/jquery-migrate-1.2.1.min',
+			'admin/jquery-ui-1.11.2.custom.min.js',
 			'admin/default'
 		))
 		?>

@@ -24,14 +24,14 @@
 			'admin/colorbox/colorbox')); ?>
 		<!--[if IE]><?php $this->BcBaser->js(array('admin/excanvas')) ?><![endif]-->
 		<?php $this->BcBaser->js(array(
-			'admin/jquery-1.7.2.min',
-			'admin/jquery-ui-1.8.19.custom.min',
-			'admin/jquery.colorbox-min-1.4.5',
-			'admin/jquery.mScroll',
-			'admin/functions',
-			'admin/startup',
-			'admin/adjust_scroll',
-			'admin/yuga')); ?>
+			'jquery-1.7.2.min',
+			'jquery-ui-1.8.19.custom.min',
+			'jquery.colorbox-min-1.4.5',
+			'jquery.mScroll',
+			'functions',
+			'startup',
+			'adjust_scroll',
+			'yuga')); ?>
 			<?php $this->BcBaser->scripts() ?>
 	</head>
 	<body id="<?php $this->BcBaser->contentsName() ?>" class="normal">
