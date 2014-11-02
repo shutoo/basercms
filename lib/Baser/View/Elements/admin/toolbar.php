@@ -12,7 +12,6 @@
  * @license			http://basercms.net/license/index.html
  */
 App::uses('AuthComponent', 'Controller/Component');
-$this->BcBaser->js(array('admin/outerClick'));
 $loginUrl = '';
 $currentAuthPrefix = Configure::read('BcAuthPrefix.' . $currentPrefix);
 if (!empty($currentAuthPrefix['loginAction'])) {
@@ -47,13 +46,15 @@ $(function(){
 			$bcUserMenuItem.removeClass(activeClassName);
 			$parent.addClass(activeClassName);
 		}
-    });
-	$bcUserMenuItem.on('outerClick', function () {
-		var $this = $(this);
-		if ($this.hasClass(activeClassName)) {
-			$this.removeClass(activeClassName);
-		}
 	});
+	$bcUserMenuItem.on('click', function (event) {
+		event.stopPropagation();
+    });
+    $(document).on('click', function() {
+		if ($bcUserMenuItem.hasClass(activeClassName)) {
+			$bcUserMenuItem.removeClass(activeClassName);
+		}
+    });
 	$bcSystemMenu.find('h2').on('click', function () {
 		$(this).next().slideToggle(200);
 	});
