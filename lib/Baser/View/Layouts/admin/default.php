@@ -31,22 +31,8 @@
 		<?php
 		$this->BcBaser->js(array(
 			'admin/jquery-1.7.2.min',
-			'admin/jquery-ui-1.8.19.custom.min',
-			'admin/i18n/ui.datepicker-ja',
-			'admin/jquery.corner-2.12',
-			'admin/jquery.bt.min',
-			'admin/jquery.contextMenu-1.0/jquery.contextMenu',
-			'admin/jquery.form-2.94',
-			'admin/jquery.validate.min',
-			'admin/jquery.colorbox-min-1.4.5',
-			'admin/jquery.mScroll',
-			'admin/jquery.baseUrl',
-			'admin/credit',
-			'admin/validate_messages_ja',
-			'admin/functions',
-			'admin/startup',
-			'admin/adjust_scroll',
-			'admin/yuga'))
+			'admin/default'
+		))
 		?>
 <?php $this->BcBaser->scripts() ?>
 	</head>
