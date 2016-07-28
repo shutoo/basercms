@@ -68,7 +68,7 @@ class User extends AppModel {
  * @var array
  */
 	public $virtualFields = array(
-		'real_name' => 'CONCAT(User.real_name_1, " ", User.real_name_2)'
+		'real_name' => 'CONCAT(User.real_name_1, User.real_name_2)'
 	);
 
 /**
